@@ -24,6 +24,9 @@ DEVICE_PATH := device/samsung/o1s
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
+# Bluetooth
+BOARD_CUSTOM_BT_CONFIG := $(DEVICE_PATH)/bluetooth/libbt_vndcfg.txt
+
 # Display
 TARGET_SCREEN_DENSITY := 420
 
