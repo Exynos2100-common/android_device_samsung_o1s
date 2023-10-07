@@ -28,7 +28,7 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 BOARD_CUSTOM_BT_CONFIG := $(DEVICE_PATH)/bluetooth/libbt_vndcfg.txt
 
 # Display
-TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_DENSITY := 440
 
 # Kernel
 TARGET_KERNEL_CONFIG := exynos2100-o1sxxx_defconfig
