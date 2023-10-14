@@ -30,6 +30,18 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Path to current tree
+DEVICE_PATH := device/samsung/o1s
+
+# Kernel
+TARGET_KERNEL_DIR ?= device/samsung/o1s-kernel
+LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
+
+PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
+
+# Kernel Headers
+PRODUCT_VENDOR_KERNEL_HEADERS += device/samsung/o1s-kernel/kernel-headers
+
 # Recovery/vendor_boot firmware
 PRODUCT_COPY_FILES += \
     vendor/samsung/o1s/proprietary/vendor/firmware/y792_o1.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/y792_o1.bin \
