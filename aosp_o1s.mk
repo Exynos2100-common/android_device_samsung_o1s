@@ -22,18 +22,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/samsung/o1s/device.mk)
 
 ## Boot Animation
-TARGET_BOOTANIMATION_HALF_RES := true
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
+TARGET_BOOT_ANIMATION_RES := 1080
 
-## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+## Inherit some common Pixel Experience stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 ## Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Pixel Experience Flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_SUPPORTS_QUICK_TAP := false
+
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := lineage_o1s
+PRODUCT_NAME := aosp_o1s
 PRODUCT_DEVICE := o1s
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G991B
