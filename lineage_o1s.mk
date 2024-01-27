@@ -29,6 +29,11 @@ TARGET_SCREEN_WIDTH := 1080
 ## Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Matrixx
+MATRIXX_CHIPSET := exynos2100
+MATRIXX_BATTERY := 4000mAh
+MATRIXX_DISPLAY := 1080x2400
+
 ## Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
